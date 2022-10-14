@@ -1,0 +1,178 @@
+{% extends 'beginner.html' %}
+{% block content %}
+
+
+
+<div class="container">
+    <div class="content-section">
+        {% if request.form.get('submit1') %}
+        <h3>{{ form1.title }} </h3>
+        {% elif request.form.get('submit2') %}
+        <h3>{{ form2.title }}</h3>
+        {% elif request.form.get('submit3') %}
+        <h3>{{ form3.title }}</h3>
+        {% elif request.form.get('submit4') %}
+        <h3>{{ form4.title }}</h3>
+        {% elif request.form.get('submit5') %}
+        <h3>{{ form5.title }}</h3>
+        {% elif request.form.get('submit6') %}
+        <h3>{{ form6.title }}</h3>
+        {% elif request.form.get('submit7') %}
+        <h3>{{ form7.title }}</h3>
+        {% elif request.form.get('submit8') %}
+        <h3>{{ form8.title }}</h3>
+        {% elif request.form.get('submit9') %}
+        <h3>{{ form9.title }}</h3>
+        {% elif request.form.get('submit10') %}
+        <h3>{{ form10.title }}</h3>
+
+        {% endif %}
+    </div>
+    <div class="content-section">
+        {% if request.form.get('submit1') %}
+        <form method="POST" action="">
+            <div class="form-group">
+                {{ form1.tw1 }}
+                {{ form1.tw2 }}
+                {{ form1.tw3 }}
+                {{ form1.tw4 }}
+            </div>
+            <div class="form-group">
+                {{ form1.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+        {% elif request.form.get('submit2') %}
+        <form method="POST" action="">
+            <div class="form-group">
+                {{ form2.tw1 }}
+                {{ form2.tw2 }}
+                {{ form2.tw3 }}
+                {{ form2.tw4 }}
+                {{ form2.tw5 }}
+            </div>
+            <div class="form-group">
+                {{ form2.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+        {% elif request.form.get('submit3') %}
+        <form method="POST" action="">
+            <div class="form-group">
+                {{ form3.tw1 }}
+                {{ form3.tw2 }}
+                {{ form3.tw3 }}
+                {{ form3.tw4 }}
+            </div>
+            <div class="form-group">
+                {{ form3.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+        {% elif request.form.get('submit4') %}
+        <form method="POST" action="">
+            <div class="form-group">
+                {{ form4.tw1 }}
+                {{ form4.tw2 }}
+                {{ form4.tw3 }}
+                {{ form4.tw4 }}
+                {{ form4.tw5 }}
+            </div>
+            <div class="form-group">
+                {{ form4.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+        {% elif request.form.get('submit5') %}
+        <form method="POST" action="">
+            <div class="form-group">
+                {{ form5.tw1 }}
+                {{ form5.tw2 }}
+                {{ form5.tw3 }}
+                {{ form5.tw4 }}
+                {{ form5.tw5 }}
+                {{ form5.tw6 }}
+                {{ form5.tw7 }}
+                {{ form5.tw8 }}
+            </div>
+            <div class="form-group">
+                {{ form5.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+        {% elif request.form.get('submit6') %}
+        <form method="POST" action="">
+            <div class="form-group">
+                {{ form6.tw1 }}
+                {{ form6.tw2 }}
+                {{ form6.tw3 }}
+                {{ form6.tw4 }}
+                {{ form6.tw5 }}
+            </div>
+            <div class="form-group">
+                {{ form6.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+        {% elif request.form.get('submit7') %}
+        <form method="POST" action="">
+            <div class="form-group">
+                {{ form7.tw1 }}
+                {{ form7.tw2 }}
+                {{ form7.tw3 }}
+                {{ form7.tw4 }}
+            </div>
+            <div class="form-group">
+                {{ form7.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+        {% elif request.form.get('submit8') %}
+        <form method="POST" action="">
+            <div class="form-group">
+                {{ form8.tw1 }}
+                {{ form8.tw2 }}
+                {{ form8.tw3 }}
+                {{ form8.tw4 }}
+                {{ form8.tw5 }}
+            </div>
+            <div class="form-group">
+                {{ form8.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+        {% elif request.form.get('submit9') %}
+        <form method="POST" action="">
+            <div class="form-group">
+                {{ form9.tw1 }}
+                {{ form9.tw2 }}
+                {{ form9.tw3 }}
+                {{ form9.tw4 }}
+                {{ form9.tw5 }}
+            </div>
+            <div class="form-group">
+                {{ form9.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+        {% elif request.form.get('submit10') %}
+        <form method="POST" action="">
+            <div class="form-group">
+                {{ form10.tw1 }}
+                {{ form10.tw2 }}
+                {{ form10.tw3 }}
+                {{ form10.tw4 }}
+                {{ form10.tw5 }}
+                {{ form10.tw6 }}
+            </div>
+            <div class="form-group">
+                {{ form10.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+        {% endif %}
+    </div>
+
+    <div>
+        <!--   Getting flash message from certain forms -->
+        {% for category, message in get_flashed_messages(with_categories=True) %}
+        {% if message %}
+        <div class="alert alert-{{category}}">Success: {{ message }}</div>
+        <a class="btn btn-info" href="/beginner">Confirm and back</a>
+              
+
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

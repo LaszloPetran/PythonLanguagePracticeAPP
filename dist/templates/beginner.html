@@ -1,0 +1,317 @@
+{% include 'layout.html' %}
+{% block content %}
+<div class="container">
+    <h1>Igeidő gyakorlás</h1>
+    <p>
+        Válassz ki egy mondatot, klikkelj a "Megpróbálom ezt: " gombra, <br> majd alkosd meg a magyarul leírt mondatot a legördulő listában szereplő felkínált lehetőségekkel. <br />
+        Ha a próbálkozás sikeres, megjelenik egy gomb, mellyel elkönyveled sikeres próbálkozásod,
+        és kijelzed az eddigi eredményeid. Sok sikert, és jó tanulást.
+    </p>
+        
+
+    <div class="content-section">
+        <h3>
+            Eddigi eredmények:
+        </h3>
+
+
+        <table class="table table-bordered table-striped">
+            <tr>
+                {% if dataAll[0]['completed'] == True %}
+                <td class="bg-success">1. Megoldva</td>
+                {% else %}
+                <td>1.</td>
+                {% endif %}
+                {% if data2['completed'] == True %}
+                <td class="bg-success">2. Megoldva</td>
+                {% else %}
+                <td>2.</td>
+                {% endif %}
+                {% if data3['completed'] == True %}
+                <td class="bg-success">3. Megoldva</td>
+                {% else %}
+                <td>3.</td>
+                {% endif %}
+                {% if data4['completed'] == True %}
+                <td class="bg-success">4. Megoldva</td>
+                {% else %}
+                <td>4.</td>
+                {% endif %}
+                {% if data5['completed'] == True %}
+                <td class="bg-success">5. Megoldva</td>
+                {% else %}
+                <td>5.</td>
+                {% endif %}
+                {% if data6['completed'] == True %}
+                <td class="bg-success">6. Megoldva</td>
+                {% else %}
+                <td>6.</td>
+                {% endif %}
+                {% if data7['completed'] == True %}
+                <td class="bg-success">7. Megoldva</td>
+                {% else %}
+                <td>7.</td>
+                {% endif %}
+                {% if data8['completed'] == True %}
+                <td class="bg-success">8. Megoldva</td>
+                {% else %}
+                <td>8.</td>
+                {% endif %}
+                {% if data9['completed'] == True %}
+                <td class="bg-success">9. Megoldva</td>
+                {% else %}
+                <td>9.</td>
+                {% endif %}
+                {% if data10['completed'] == True %}
+                <td class="bg-success">10. Megoldva</td>
+                {% else %}
+                <td>10.</td>
+                {% endif %}
+
+               
+            </tr>
+        </table>
+
+        <!-- Deleting all results-->
+        <form method="POST" action="/deleteresult">
+            <button class="btn btn-danger" >Eredmények törlése!!!</button>
+        </form>
+        
+    </div>
+    
+    
+    <div class="container-fluid">
+        <form method="POST" action="/singletest">
+            {% if dataAll[0]['completed'] == True %}
+            <div id="1" class="content-section bg-success">
+                <h5>
+                    {{ form1.submit1(class="btn btn-info") }}
+                    1. Minden nap futok.
+                    <small>( {{ dataAll[0]['type'] }} )</small>
+                </h5>
+                
+            </div>
+            {% else %}
+            <div id="1" class="content-section">
+                <h5>
+                    {{ form1.submit1(class="btn btn-info") }}
+                    1. Minden nap futok. 
+                    <small>( {{ dataAll[0]['type'] }} )</small>
+                </h5>
+               
+            </div>
+            
+            {% endif %}
+        </form>
+        </div>
+
+        <div class="container-fluid">
+            <form method="POST" action="/singletest">
+                {% if data2['completed'] == True %}
+                <div id="2" class="content-section bg-success">
+                    <h5>
+                        {{ form2.submit2(class="btn btn-info") }}
+                        2. Szoktál futni minden este?
+                        <small>( {{ data2['type'] }} )</small>
+                    </h5>
+                </div>
+                {% else %}
+                <div id="2" class="content-section">
+                    <h5>
+                        {{ form2.submit2(class="btn btn-info") }}
+                        2. Szoktál futni minden este?
+                        <small>( {{ data2['type'] }} )</small>
+                    </h5>
+                </div>
+                {% endif %}
+            </form>
+
+        </div>
+
+    <div class="container">
+        <form method="POST" action="/singletest">
+            {% if data3['completed'] == True %}
+            <div id="3" class="content-section bg-success">
+                <h5>
+                    {{ form3.submit3(class="btn btn-info") }}
+                    3. Megjavítottam a kerítést.
+                    <small>( {{ data3['type'] }} )</small>
+                </h5>
+            </div>
+            {% else %}
+            <div id="3" class="content-section">
+                <h5>
+                    {{ form3.submit3(class="btn btn-info") }}
+                    3. Megjavítottam a kerítést.
+                    <small>( {{ data3['type'] }} )</small>
+                </h5>
+            </div>
+            {% endif %}
+        </form>
+    </div>
+
+    <div class="container">
+        <form method="POST" action="/singletest">
+            {% if data4['completed'] == True %}
+            <div id="4" class="content-section bg-success">
+                <h5>
+                    {{ form4.submit4(class="btn btn-info") }}
+                    4. Készítettem neked reggelit.
+                    <small>( {{ data4['type'] }} )</small>
+                </h5>
+            </div>
+            {% else %}
+            <div id="4" class="content-section">
+                <h5>
+                    {{ form4.submit4(class="btn btn-info") }}
+                    4. Készítettem neked reggelit.
+                    <small>( {{ data4['type'] }} )</small>
+                </h5>
+            </div>
+            {% endif %}
+        </form>
+    </div>
+
+    <div class="container">
+        <form method="POST" action="/singletest">
+            {% if data5['completed'] == True %}
+            <div id="5" class="content-section bg-success">
+                <h5>
+                    {{ form5.submit5(class="btn btn-info") }}
+                    5. Reggel óta várok rád.
+                    <small>( {{ data5['type'] }} )</small>
+                </h5>
+            </div>
+            {% else %}
+            <div id="5" class="content-section">
+                <h5>
+                    {{ form5.submit5(class="btn btn-info") }}
+                    5. Reggel óta várok rád.
+                    <small>( {{ data5['type'] }} )</small>
+                </h5>
+            </div>
+            {% endif %}
+        </form>
+    </div>
+
+    <div class="container">
+        <form method="POST" action="/singletest">
+            {% if data6['completed'] == True %}
+            <div id="6" class="content-section bg-success">
+                <h5>
+                    {{ form6.submit6(class="btn btn-info") }}
+                    6. Könyvet olvasok.
+                    <small>( {{ data6['type'] }} )</small>
+                </h5>
+            </div>
+            {% else %}
+            <div id="6" class="content-section">
+                <h5>
+                    {{ form6.submit6(class="btn btn-info") }}
+                    6. Könyvet olvasok.
+                    <small>( {{ data6['type'] }} )</small>
+                </h5>
+            </div>
+            {% endif %}
+        </form>
+    </div>
+
+    <div class="container">
+        <form method="POST" action="/singletest">
+            {% if data7['completed'] == True %}
+            <div id="7" class="content-section bg-success">
+                <h5>
+                    {{ form7.submit7(class="btn btn-info") }}
+                    7. Láttam Julie-t tegnap.
+                    <small>( {{ data7['type'] }} )</small>
+                </h5>
+            </div>
+            {% else %}
+            <div id="7" class="content-section">
+                <h5>
+                    {{ form7.submit7(class="btn btn-info") }}
+                    7. Láttam Julie-t tegnap.
+                    <small>( {{ data7['type'] }} )</small>
+                </h5>
+            </div>
+            {% endif %}
+        </form>
+    </div>
+
+    <div class="container">
+        <form method="POST" action="/singletest">
+            {% if data8['completed'] == True %}
+            <div id="8" class="content-section bg-success">
+                <h5>
+                    {{ form8.submit8(class="btn btn-info") }}
+                    8. Na végre, megnéztem a Pulp Fiction-t.
+                    <small>( {{ data8['type'] }} )</small>
+                </h5>
+            </div>
+            {% else %}
+            <div id="8" class="content-section">
+                <h5>
+                    {{ form8.submit8(class="btn btn-info") }}
+                    8. Na végre, megnéztem a Pulp Fiction-t.
+                    <small>( {{ data8['type'] }} )</small>
+                </h5>
+            </div>
+            {% endif %}
+        </form>
+    </div>
+
+    <div class="container">
+        <form method="POST" action="/singletest">
+            {% if data9['completed'] == True %}
+            <div id="9" class="content-section bg-success">
+                <h5>
+                    {{ form9.submit9(class="btn btn-info") }}
+                    9. Láttam egy éve a Pulp Fiction-t.
+                    <small>( {{ data9['type'] }} )</small>
+                </h5>
+            </div>
+            {% else %}
+            <div id="9" class="content-section">
+                <h5>
+                    {{ form9.submit9(class="btn btn-info") }}
+                    9. Láttam egy éve a Pulp Fiction-t.
+                    <small>( {{ data9['type'] }} )</small>
+                </h5>
+            </div>
+            {% endif %}
+        </form>
+    </div>
+
+    <div class="container">
+        <form method="POST" action="/singletest">
+            {% if data10['completed'] == True %}
+            <div id="10" class="content-section bg-success">
+                <h5>
+                    {{ form10.submit10(class="btn btn-info") }}
+                    10. Holnap meglátogatom a szomszédot.
+                    <small>( {{ data10['type'] }} )</small>
+                </h5>
+            </div>
+            {% else %}
+            <div id="10" class="content-section">
+                <h5>
+                    {{ form10.submit10(class="btn btn-info") }}
+                    10. Holnap meglátogatom a szomszédot.
+                    <small>( {{ data10['type'] }} )</small>
+                </h5>
+            </div>
+            {% endif %}
+        </form>
+    </div>
+
+</div>
+
+{% endblock content %}
+    
+    
+    
+    
+    
+    
+
+

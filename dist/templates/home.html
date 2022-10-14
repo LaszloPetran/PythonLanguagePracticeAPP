@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="container">
+        <h1>Testing Home...</h1>
+    </div>
+    
+    
+    <div>
+        <a class="btn btn-success ml-2" href="{{ url_for('grammar') }}">Grammar</a><br>
+        <a class="btn btn-success ml-3" href="{{ url_for('vocabulary') }}">Vocabulary</a><br>
+        <a class="btn btn-success ml-4" href="{{ url_for('beginner') }}">Beginner</a><br>
+        <a class="btn btn-success ml-4" href="{{ url_for('intermediate') }}">Intermediate</a><br>
+        <a class="btn btn-success ml-3" href="{{ url_for('advanced') }}">Advanced</a><br>
+        <a class="btn btn-success ml-2" href="{{ url_for('createform') }}">Personal</a>
+    </div>
+{% endblock content %}

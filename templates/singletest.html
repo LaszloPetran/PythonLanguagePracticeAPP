@@ -1,0 +1,123 @@
+{% extends 'beginner.html' %}
+{% block content %}
+
+
+
+<div class="container">
+    <div class="content-section">
+        {% for t in range(data_all|length) %}
+        {% if request.form.get(data_all[t]['submit']) %}
+        <h3>{{ form_all[t].title }} </h3>
+        {% endif %}
+        {% endfor %}
+
+
+    </div>
+
+
+    <!-- request.form.get gets the proper parameter from json file (this is the one clicked on /beginner.html, Submitx), 
+        and checking the word numbers (w_number) to create different fields -->
+    {% for d in range(data_all|length) %}
+
+    {% if request.form.get(data_all[d]['submit']) and data_all[d]['w_number'] == 4 %}
+    <div class="content-section">
+        <form method="POST" action="">
+            <div class="form-group">
+                {{ form_all[d].tw1 }}
+                {{ form_all[d].tw2 }}
+                {{ form_all[d].tw3 }}
+                {{ form_all[d].tw4 }}
+            </div>
+            <div class="form-group">
+                {{ form_all[d].submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+    {% elif request.form.get(data_all[d]['submit']) and data_all[d]['w_number'] == 5 %}
+    <div class="content-section">
+        <form method="POST" action="">
+            <div class="form-group">
+                {{ form_all[d].tw1 }}
+                {{ form_all[d].tw2 }}
+                {{ form_all[d].tw3 }}
+                {{ form_all[d].tw4 }}
+                {{ form_all[d].tw5 }}
+            </div>
+            <div class="form-group">
+                {{ form_all[d].submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+    {% elif request.form.get(data_all[d]['submit']) and data_all[d]['w_number'] == 6 %}
+    <div class="content-section">
+        <form method="POST" action="">
+            <div class="form-group">
+                {{ form_all[d].tw1 }}
+                {{ form_all[d].tw2 }}
+                {{ form_all[d].tw3 }}
+                {{ form_all[d].tw4 }}
+                {{ form_all[d].tw5 }}
+                {{ form_all[d].tw6 }}
+            </div>
+            <div class="form-group">
+                {{ form_all[d].submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+    {% elif request.form.get(data_all[d]['submit']) and data_all[d]['w_number'] == 7 %}
+    <div class="content-section">
+        <form method="POST" action="">
+            <div class="form-group">
+                {{ form_all[d].tw1 }}
+                {{ form_all[d].tw2 }}
+                {{ form_all[d].tw3 }}
+                {{ form_all[d].tw4 }}
+                {{ form_all[d].tw5 }}
+                {{ form_all[d].tw6 }}
+                {{ form_all[d].tw7 }}
+
+            </div>
+            <div class="form-group">
+                {{ form_all[d].submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+    {% elif request.form.get(data_all[d]['submit']) and data_all[d]['w_number'] == 8 %}
+    <div class="content-section">
+        <form method="POST" action="">
+            <div class="form-group">
+                {{ form_all[d].tw1 }}
+                {{ form_all[d].tw2 }}
+                {{ form_all[d].tw3 }}
+                {{ form_all[d].tw4 }}
+                {{ form_all[d].tw5 }}
+                {{ form_all[d].tw6 }}
+                {{ form_all[d].tw7 }}
+                {{ form_all[d].tw8 }}
+            </div>
+            <div class="form-group">
+                {{ form_all[d].submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+</div>
+        {% endif %}
+    
+    {% endfor %}
+
+
+    <div>
+        <!--   Getting flash message from certain forms to display the results. -->
+        {% for category, message in get_flashed_messages(with_categories=True) %}
+        {% if category == "success" %}
+        <div class="alert alert-{{category}}">Success: {{ message }}</div>
+        <a class="btn btn-info" href="/beginner">Confirm and back</a>
+        {% elif category == "danger" %}
+        <div class="alert alert-{{category}}">Error: {{ message }}</div>
+        <a class="btn btn-info" href="/beginner">Back</a>
+
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    {% endblock content %}

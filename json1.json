@@ -1,0 +1,582 @@
+{
+  "sentence": [
+    {
+      "choice1": [
+        "...",
+        "This",
+        "That",
+        "It"
+      ],
+      "choice2": [
+        "...",
+        "are",
+        "is",
+        "was"
+      ],
+      "choice3": [
+        "...",
+        "a",
+        "an",
+        "one"
+      ],
+      "choice4": [
+        "...",
+        "test.",
+        "tast.",
+        "teast."
+      ],
+      "completed": false,
+      "english": [
+        "This",
+        "is",
+        "a",
+        "test."
+      ],
+      "english_full": "This is a test.",
+      "hun": "Ez egy teszt.",
+      "number": 0,
+      "submit": "submit0",
+      "type": "Present Simple",
+      "w_number": 4
+    },
+    {
+      "choice1": [
+        "...",
+        "I",
+        "me",
+        "my"
+      ],
+      "choice2": [
+        "...",
+        "ran",
+        "run",
+        "running"
+      ],
+      "choice3": [
+        "...",
+        "all",
+        "every",
+        "each"
+      ],
+      "choice4": [
+        "...",
+        "night.",
+        "afternoon.",
+        "day."
+      ],
+      "completed": false,
+      "english": [
+        "I",
+        "run",
+        "every",
+        "day."
+      ],
+      "english_full": "I run every day.",
+      "hun": "Minden nap futok.",
+      "number": 1,
+      "submit": "submit1",
+      "type": "Present Simple",
+      "w_number": 4
+    },
+    {
+      "choice1": [
+        "...",
+        "Do",
+        "Have",
+        "Did"
+      ],
+      "choice2": [
+        "...",
+        "your",
+        "you",
+        "you're"
+      ],
+      "choice3": [
+        "...",
+        "ran",
+        "run",
+        "running"
+      ],
+      "choice4": [
+        "...",
+        "all",
+        "each",
+        "every"
+      ],
+      "choice5": [
+        "...",
+        "morning?",
+        "evening?",
+        "night?"
+      ],
+      "completed": false,
+      "english": [
+        "Do",
+        "you",
+        "run",
+        "every",
+        "evening?"
+      ],
+      "english_full": "Do you run every evening?",
+      "hun": "Szoktál futni minden este?",
+      "number": 2,
+      "submit": "submit2",
+      "type": "Present Simple",
+      "w_number": 5
+    },
+    {
+      "choice1": [
+        "...",
+        "I",
+        "me",
+        "my"
+      ],
+      "choice2": [
+        "...",
+        "had",
+        "have",
+        "did"
+      ],
+      "choice3": [
+        "...",
+        "repair",
+        "repaired",
+        "repairs"
+      ],
+      "choice4": [
+        "...",
+        "the gate.",
+        "the fence.",
+        "the barrier."
+      ],
+      "completed": false,
+      "english": [
+        "I",
+        "have",
+        "repaired",
+        "the fence."
+      ],
+      "english_full": "I have repaired the fence.",
+      "hun": "Megjavítottam a kerítést.",
+      "number": 3,
+      "submit": "submit3",
+      "type": "Present Perfect",
+      "w_number": 4
+    },
+    {
+      "choice1": [
+        "...",
+        "I",
+        "me",
+        "my"
+      ],
+      "choice2": [
+        "...",
+        "did",
+        "make",
+        "made"
+      ],
+      "choice3": [
+        "...",
+        "breakfast",
+        "lunch",
+        "dinner"
+      ],
+      "choice4": [
+        "...",
+        "at",
+        "for",
+        "to"
+      ],
+      "choice5": [
+        "...",
+        "your.",
+        "yours.",
+        "you."
+      ],
+      "completed": false,
+      "english": [
+        "I",
+        "made",
+        "breakfast",
+        "for",
+        "you."
+      ],
+      "english_full": "I made breakfast for you.",
+      "hun": "Készítettem neked reggelit.",
+      "number": 4,
+      "submit": "submit4",
+      "type": "Past Simple",
+      "w_number": 5
+    },
+    {
+      "choice1": [
+        "...",
+        "I",
+        "My",
+        "Me"
+      ],
+      "choice2": [
+        "...",
+        "was",
+        "have",
+        "had"
+      ],
+      "choice3": [
+        "...",
+        "been",
+        "be",
+        "waiting"
+      ],
+      "choice4": [
+        "...",
+        "wait",
+        "waited",
+        "waiting"
+      ],
+      "choice5": [
+        "...",
+        "to",
+        "for",
+        "at"
+      ],
+      "choice6": [
+        "...",
+        "yours",
+        "you are",
+        "you"
+      ],
+      "choice7": [
+        "...",
+        "from",
+        "since",
+        "as"
+      ],
+      "choice8": [
+        "...",
+        "morning.",
+        "evening.",
+        "afternoon."
+      ],
+      "completed": false,
+      "english": [
+        "I",
+        "have",
+        "been",
+        "waiting",
+        "for",
+        "you",
+        "since",
+        "morning."
+      ],
+      "english_full": "I have been waiting for you since morning.",
+      "hun": "Reggel óta várok rád.",
+      "number": 5,
+      "submit": "submit5",
+      "type": "Present Perfect Continuous",
+      "w_number": 8
+    },
+    {
+      "choice1": [
+        "...",
+        "I",
+        "Me",
+        "My"
+      ],
+      "choice2": [
+        "...",
+        "was",
+        "am",
+        "are"
+      ],
+      "choice3": [
+        "...",
+        "read",
+        "readed",
+        "reading"
+      ],
+      "choice4": [
+        "...",
+        "a",
+        "the",
+        "an"
+      ],
+      "choice5": [
+        "...",
+        "book.",
+        "novel.",
+        "note."
+      ],
+      "completed": false,
+      "english": [
+        "I",
+        "am",
+        "reading",
+        "a",
+        "book."
+      ],
+      "english_full": "I am reading a book.",
+      "hun": "Könyvet olvasok.",
+      "number": 6,
+      "submit": "submit6",
+      "type": "Present Continuous",
+      "w_number": 5
+    },
+    {
+      "choice1": [
+        "...",
+        "I",
+        "My",
+        "Me"
+      ],
+      "choice2": [
+        "...",
+        "see",
+        "saw",
+        "seen"
+      ],
+      "choice3": [
+        "...",
+        "Julie",
+        "her",
+        "she"
+      ],
+      "choice4": [
+        "...",
+        "yesterday.",
+        "today.",
+        "tomorrow."
+      ],
+      "completed": false,
+      "english": [
+        "I",
+        "saw",
+        "Julie",
+        "yesterday."
+      ],
+      "english_full": "I saw Julie yesterday.",
+      "hun": "Láttam Julie-t tegnap.",
+      "number": 7,
+      "submit": "submit7",
+      "type": "Past Simple",
+      "w_number": 4
+    },
+    {
+      "choice1": [
+        "...",
+        "Finally,",
+        "Good,",
+        "Great,"
+      ],
+      "choice2": [
+        "...",
+        "I",
+        "me",
+        "my"
+      ],
+      "choice3": [
+        "...",
+        "had",
+        "have",
+        "did"
+      ],
+      "choice4": [
+        "...",
+        "seen",
+        "saw",
+        "see"
+      ],
+      "choice5": [
+        "...",
+        "Pulp Fiction.",
+        "the film.",
+        "it."
+      ],
+      "completed": false,
+      "english": [
+        "Finally,",
+        "I",
+        "have",
+        "seen",
+        "Pulp Fiction."
+      ],
+      "english_full": "Finally, I have seen Pulp Fiction.",
+      "hun": "Na végre, megnéztem a Pulp Fiction-t.",
+      "number": 8,
+      "submit": "submit8",
+      "type": "Present Perfect",
+      "w_number": 5
+    },
+    {
+      "choice1": [
+        "...",
+        "I",
+        "me",
+        "my"
+      ],
+      "choice2": [
+        "...",
+        "had",
+        "have",
+        "did"
+      ],
+      "choice3": [
+        "...",
+        "seen",
+        "saw",
+        "see"
+      ],
+      "choice4": [
+        "...",
+        "Pulp Fiction",
+        "saw",
+        "see"
+      ],
+      "choice5": [
+        "...",
+        "a year ago.",
+        "one year ago.",
+        "an year ago."
+      ],
+      "completed": false,
+      "english": [
+        "I",
+        "had",
+        "seen",
+        "Pulp Fiction",
+        "a year ago."
+      ],
+      "english_full": "I had seen Pulp Fiction a year ago.",
+      "hun": "Láttam egy éve a Pulp Fiction-t.",
+      "number": 9,
+      "submit": "submit9",
+      "type": "Past Perfect",
+      "w_number": 5
+    },
+    {
+      "choice1": [
+        "...",
+        "I",
+        "me",
+        "my"
+      ],
+      "choice2": [
+        "...",
+        "will",
+        "do",
+        "am"
+      ],
+      "choice3": [
+        "...",
+        "visit",
+        "check",
+        "see"
+      ],
+      "choice4": [
+        "...",
+        "my",
+        "mine",
+        "our"
+      ],
+      "choice5": [
+        "...",
+        "neighbor",
+        "them",
+        "next house"
+      ],
+      "choice6": [
+        "...",
+        "soon.",
+        "next day.",
+        "tomorrow."
+      ],
+      "completed": false,
+      "english": [
+        "I",
+        "will",
+        "visit",
+        "my",
+        "neighbor",
+        "tomorrow."
+      ],
+      "english_full": "I will visit my neighbor tomorrow.",
+      "hun": "Holnap meglátogatom a szomszédot.",
+      "number": 10,
+      "submit": "submit10",
+      "type": "Future Simple",
+      "w_number": 6
+    },
+    {
+      "choice1": [
+        "...",
+        "I",
+        "me",
+        "my"
+      ],
+      "choice2": [
+        "...",
+        "visited",
+        "checked",
+        "seen"
+      ],
+      "choice3": [
+        "...",
+        "my",
+        "mine",
+        "our"
+      ],
+      "choice4": [
+        "...",
+        "neighbor",
+        "them",
+        "next house"
+      ],
+      "choice5": [
+        "...",
+        "recently.",
+        "back.",
+        "yesterday."
+      ],
+      "completed": false,
+      "english_full": "I visited my neighbor yesterday.",
+      "hun": "Tegnap meglátogattam a szomszédot.",
+      "number": 11,
+      "submit": "submit11",
+      "type": "Past Simple",
+      "w_number": 5
+    },
+    {
+      "choice1": [
+        "...",
+        "me",
+        "I",
+        "my"
+      ],
+      "choice2": [
+        "...",
+        "was",
+        "are",
+        "am"
+      ],
+      "choice3": [
+        "...",
+        "driving",
+        "drive",
+        "drove"
+      ],
+      "choice4": [
+        "...",
+        "yet.",
+        "now.",
+        "still."
+      ],
+      "completed": false,
+      "english_full": "I am driving now.",
+      "hun": "Vezetek.",
+      "number": 12,
+      "submit": "submit12",
+      "type": "Present continuous",
+      "w_number": 4
+    }
+  ]
+}

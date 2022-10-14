@@ -1,0 +1,105 @@
+﻿{% extends 'beginner.html' %}
+{% block content %}
+    <div class="container">
+
+        Creating a 4-Word Sentence. Every single field must be filled in order to successfully add it to json database. 
+    </div>
+
+<div class="container">
+    <div class="form-group">
+        <form method="POST" action="">
+            <!-- ENGLISH FULL SENTENCE -->
+            <div class="form-group">
+                {{ form.english_full.label(class="form-control-label") }}
+                {% if form.type.errors %}
+                {{ form.english_full(class="form-control is-invalid")}}
+                <div class="invalid-feedback">
+                    {% for error in form.english_full.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.english_full(class="form-control") }}
+                {% endif %}
+            </div>
+            <!-- HUNGARIAN SENTENCE -->
+            <div class="form-group">
+                {{ form.hun.label(class="form-control-label") }}
+                {% if form.hun.errors %}
+                {{ form.hun(class="form-control is-invalid")}}
+                <div class="invalid-feedback">
+                    {% for error in form.hun.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.hun(class="form-control") }}
+                {% endif %}
+            </div>
+            <!-- TYPE OF SENTENCE -->
+            <div class="form-group">
+                {{ form.type.label(class="form-control-label") }}
+                {% if form.type.errors %}
+                {{ form.type(class="form-control is-invalid")}}
+                <div class="invalid-feedback">
+                    {% for error in form.type.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.type(class="form-control") }}
+                {% endif %}
+            </div>
+            <!-- Word Choices 1/1  -->
+            <div class="form-group">
+                <table class="table">
+                    <thead>
+                        Please enter the words to pick here. WARNING: the words here after selected are concatenated in the background, and have to match with the "Full sentence to translate"!!! Please care of punctuations, periods, etc. 
+                        <tr>
+                            <th>Word 1</th>
+                            <th>Word 2</th>
+                            <th>Word 3</th>
+                            <th>Word 4 (Do not forget the proper periods, question marks, etc.)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ form.word1_choice1(class="form-control")}}</td>
+                            <td>{{ form.word2_choice1(class="form-control")}}</td>
+                            <td>{{ form.word3_choice1(class="form-control")}}</td>
+                            <td>{{ form.word4_choice1(class="form-control")}}</td>
+
+                        </tr>
+                        <tr>
+                            <td>{{ form.word1_choice2(class="form-control")}}</td>
+                            <td>{{ form.word2_choice2(class="form-control")}}</td>
+                            <td>{{ form.word3_choice2(class="form-control")}}</td>
+                            <td>{{ form.word4_choice2(class="form-control")}}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ form.word1_choice3(class="form-control")}}</td>
+                            <td>{{ form.word2_choice3(class="form-control")}}</td>
+                            <td>{{ form.word3_choice3(class="form-control")}}</td>
+                            <td>{{ form.word4_choice3(class="form-control")}}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ form.word1_choice4(class="form-control")}}</td>
+                            <td>{{ form.word2_choice4(class="form-control")}}</td>
+                            <td>{{ form.word3_choice4(class="form-control")}}</td>
+                            <td>{{ form.word4_choice4(class="form-control")}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+
+            <div>
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+        
+
+</div>
+{% endblock content %}

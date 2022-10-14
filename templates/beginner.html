@@ -1,0 +1,83 @@
+{% include 'layout.html' %}
+{% block content %}
+<div class="container">
+    <h1>Igeidő gyakorlás</h1>
+    <p>
+        Válassz ki egy mondatot, klikkelj a "Megpróbálom ezt: " gombra, <br> majd alkosd meg a magyarul leírt mondatot a legördulő listában szereplő felkínált lehetőségekkel. <br />
+        Ha a próbálkozás sikeres, megjelenik egy gomb, mellyel elkönyveled sikeres próbálkozásod,
+        és kijelzed az eddigi eredményeid. Sok sikert, és jó tanulást.
+    </p>
+
+
+    <!-- SETTING PROGRESS FIELD -->
+    <div class="content-section">
+        <h3>
+            Eddigi eredmények:
+        </h3>
+        <table class="table table-bordered table-striped">
+            <tr>
+            {% for m in range(data_all|length) %}
+                {% if data_all[m]['completed'] == True %}
+                <td class="bg-success">{{ data_all[m]['number'] }}. Megoldva</td>
+                {% else %}
+                <td>{{ data_all[m]['number'] }}</td>
+                {% endif %}
+            {% endfor %}
+            </tr>
+        </table>
+
+        <!-- DELETING ALL RESULTS -->
+        <form method="POST" action="/deleteresult">
+            <button class="btn btn-danger">Eredmények törlése!!!</button>
+        </form>
+
+    </div>
+
+
+    <!-- Each submit_all[x] generates a unique submitfield for a sentence that opens /singletest. 
+        This for loop goes through the entire json file and generates the sentence to translate (in this particular showcase project, 
+        it is the "hun" attribute). -->
+    {% for s in range(submit_all|length) if s < submit_all|length %}
+    
+    <div class="container-fluid">
+        <form method="POST" action="/singletest">
+            {% if data_all[s]['completed'] == True %}
+            <div id="1" class="content-section bg-success">
+                <h5>
+                    {{ submit_all[s](class="btn btn-info") }}
+                    {{ data_all[s]['number'] }} {{ data_all[s]['hun'] }}
+                    <small>( {{ data_all[s]['type'] }} )</small>
+                </h5>
+
+            </div>
+            {% else %}
+            <div id="1" class="content-section">
+                <h5>
+                    {{ submit_all[s](class="btn btn-info") }}
+                    {{ data_all[s]['number'] }} {{ data_all[s]['hun'] }}
+                    <small>( {{ data_all[s]['type'] }} )</small>
+                </h5>
+
+            </div>
+
+            {% endif %}
+        </form>
+    </div>
+    
+    
+    {% endfor %}
+
+
+
+
+</div>
+
+{% endblock content %}
+    
+    
+    
+    
+    
+    
+
+

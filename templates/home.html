@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="container">
+        <h1>Language learning web app. </h1>
+    </div>
+    
+    
+    <div class="container">
+       
+        <a class="btn btn-success ml-4" href="{{ url_for('beginner') }}">Beginner</a><br>
+       
+        <a class="btn btn-success ml-2" href="{{ url_for('createform') }}">Create Form</a>
+    </div>
+{% endblock content %}
